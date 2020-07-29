@@ -1,0 +1,32 @@
+{data.map((value) => ((
+
+
+                <Card className={classes.card}>
+                    <CardMedia
+                        className={classes.media}
+                        image={
+                            value.avatar
+                        }
+                    />
+                    <CardContent className={classes.content}>
+                        <Typography
+                            className={"MuiTypography--heading"}
+                            variant={"h6"}
+                            gutterBottom
+                        >
+                            {value.first_name + " " + value.last_name} {value.id}
+                        </Typography>
+                        <Typography
+                            className={"MuiTypography--subheading"}
+                            variant={"caption"}
+                        >
+                            Email:<a href="mailto:{value.email}">{value.email}</a>
+
+                        </Typography>
+                        <Divider className={classes.divider} light />
+                        {/* {faces.map(face => (
+                            <Avatar className={classes.avatar} key={face} src={face} />
+                        ))} */}
+                    </CardContent>
+                </Card>
+            )))}
